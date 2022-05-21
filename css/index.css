@@ -8,7 +8,6 @@ body{
 .attribution { 
     font-size: 11px; 
     text-align: center; 
-    
 }
 .attribution a { 
     color: white;
@@ -17,9 +16,12 @@ body{
 }
 main{
     min-width: 350px;
-    max-width: 500px;
+    max-width: 700px;
     margin: 20px auto;
     padding: 20px;
+}
+small{
+    display: none;
 }
 .header{
     margin:  40px auto;

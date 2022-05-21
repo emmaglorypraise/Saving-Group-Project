@@ -14,6 +14,9 @@ form.addEventListener("submit", function (event) {
     // get name
     let name = form.elements["name"];
     let fullname = name.value;
+    if (fullname.value == '' || fullname.length == 0){
+        alert('Please input name')
+    }
     console.log(fullname);
 
     // get tier
@@ -35,6 +38,9 @@ form.addEventListener("submit", function (event) {
 
     // get current amount inputed
     newAmount = amount.value;
+    if (newAmount == '' || newAmount.length == 0){
+        alert('Please input your amount to save')
+    }
     console.log(newAmount)
     let calAmount = percent * newAmount;
     calAmount = calAmount.toFixed(2);
