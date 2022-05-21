@@ -15,9 +15,56 @@ body{
     text-decoration: none; 
     margin-bottom: 10px;
 }
-.calculator-body{
+main{
     min-width: 350px;
     max-width: 500px;
     margin: 20px auto;
     padding: 20px;
+}
+.header{
+    margin:  40px auto;
+    color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.header h2{
+    font-size: 45px;
+    text-align: center;
+}
+.header h3{
+    font-size: 25px;
+    text-align: center;
+}
+.heading-2 h2 {
+    text-align: left;
+    font-size: 20px;
+    margin: 20px;
+}
+form{
+    width: 90%;
+}
+form input, form select {
+    width:100%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+.field{
+    margin: 15px auto;
+}
+small{
+    display: block;
+    color: white;
+    font-size: 18px;
+}
+button {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin: 20px auto;
+}
+button:hover {
+    background-color: whitesmoke;
+    border: 1px solid hsl(222, 26%, 31%);
 }

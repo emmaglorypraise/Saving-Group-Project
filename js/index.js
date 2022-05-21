@@ -25,10 +25,6 @@ form.addEventListener("submit", function (event) {
     // checks percentage
     if (tierSelected === 'tier 1') {
         percent = 0.07;
-        if (amount.value > 10000  || amount.value < 1000 ) {
-            console.log('You can only put N1000 to 10000 in this tier')
-            small.innerHTML = 'You can only put N1000 to 10000 in this tier';
-        }
     } else if (tierSelected === 'tier 2') {
         percent = 0.12;
     } else if (tierSelected === 'tier 3') {
