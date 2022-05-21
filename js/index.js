@@ -1,6 +1,9 @@
 const form = document.querySelector('#signup');
 const totalMoney = document.getElementById('totalGroupMoney');
 let amount = document.getElementById('amount');
+let small = document.getElementsByTagName('small');
+const msg = document.getElementById("small");
+let percent;
 
 totalMoney.innerHTML = ' N0.00';
  
@@ -16,23 +19,20 @@ form.addEventListener("submit", function (event) {
     // get tier
     let tier = document.getElementById('SelectTier');
     let tierSelected = tier.options[tier.selectedIndex].value; //gets value
-    var tierSelectedvalue = tier.options[tier.selectedIndex].text; //gets text
+    // var tierSelectedvalue = tier.options[tier.selectedIndex].text; //gets text
     console.log(tierSelected);
 
-    const msg = document.getElementById("small");
-	let percent;
-
+    // checks percentage
     if (tierSelected === 'tier 1') {
         percent = 0.07;
-        msg.innerHTML = "You will get N" + percent + ' weekly';
+        if (amount.value > 10000  || amount.value < 1000 ) {
+            console.log('You can only put N1000 to 10000 in this tier')
+            small.innerHTML = 'You can only put N1000 to 10000 in this tier';
+        }
     } else if (tierSelected === 'tier 2') {
         percent = 0.12;
-        
-        // msg.innerHTML = "You will get a percentage of 12%";
     } else if (tierSelected === 'tier 3') {
         percent = 0.25;
-        msg.innerHTML = "You will get N" + percent + ' weekly';
-        // msg.innerHTML = "You will get a percentage of 24%";
     } else {
         alert('Select a tier!')
     }
@@ -41,7 +41,13 @@ form.addEventListener("submit", function (event) {
     newAmount = amount.value;
     console.log(newAmount)
     let calAmount = percent * newAmount;
-    console.log(calAmount, "amount")
+    calAmount = calAmount.toFixed(2);
+    console.log(calAmount, "amount");
+
+    // updates input
+    totalMoney.innerHTML = newAmount;
+
+    // prints percentage received
     msg.innerHTML = "You will get N" + calAmount + ' weekly';
 
 });
