@@ -39,11 +39,11 @@ form.addEventListener("submit", function (event) {
 
     // get amount inputed and checks if it matches the tier  
     newAmount = amount.value;
-    
+
     if (newAmount == '' || newAmount.length == 0){
         alert('Please input your amount to save')
     } else if (tierSelected === 'tier 1') {
-        if (newAmount <= 1000 || newAmount > 10000) {
+        if (newAmount < 1000 || newAmount > 10000) {
         alert("Amount must be greater than 1000 and not more than 10000");
         msg.innerHTML = "Please try registering again";
         location.reload()
@@ -63,7 +63,7 @@ form.addEventListener("submit", function (event) {
             list.innerHTML = ridersList;
        }
     } else if (tierSelected === 'tier 2') {
-        if (newAmount <= 20000 || newAmount > 30000) {
+        if (newAmount < 20000 || newAmount > 30000) {
         alert("Amount must be greater than 20000 and not more than 30000");
         msg.innerHTML = "Please try registering again";
         location.reload()
@@ -83,7 +83,7 @@ form.addEventListener("submit", function (event) {
             list.innerHTML = ridersList;
    }
     } else if (tierSelected === 'tier 3') {
-        if (newAmount >= 30000) {
+        if (newAmount < 30000) {
         alert("Amount must be greater than 30000")
         msg.innerHTML = "Please try registering again";
         location.reload()
