@@ -71,7 +71,7 @@ button {
 button:hover {
     background-color: whitesmoke;
     color: hsl(222, 26%, 31%);
-    border: 1px solid hsl(222, 26%, 31%);
+    border: 1px solid hsl(222, 26%, 31%)
 }
 
 .list li {
